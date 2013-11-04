@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PONG!</title>
+    <style type="text/css">
+      canvas {
+        border: 1px solid blue; 
+        background-color: #000000;
+        position: fixed;
+        left: 25%;
+        top: 2%;
+
+        background-image:url('img/5.jpg');
+        border: 1px solid black;
+
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css"> 
+  </head>
+  <body>
+
+	<canvas id="myCanvas" width="640" height="480">
+	Sorry, but your browser does not support the HTML5 canvas tag.
+	</canvas>
+
+  <!-- Audio -->
+  <audio preload="true" id="collide">
+  <source src="http://rpg.hamsterrepublic.com/wiki-images/2/21/Collision8-Bit.ogg" />
+  </audio>
+  
+  <audio preload="true" id="brick">
+    <source src="http://www.javascriptkit.com/script/script2/click.ogg" />
+  </audio >
+  
+  <audio preload="true" id="soundEfx">
+    <source src="http://www.onlywebpro.com/demo/gamedev/pop.wav" />
+  </audio>
+  
+    <div id="output"></div>
+
+    <audio id="main_music" loop>
+    <source src="http://dl.dropbox.com/u/26141789/canvas/snake/main.mp3" type="audio/mp3" />
+    <source src="http://dl.dropbox.com/u/26141789/canvas/snake/main.ogg" type="audio/ogg"/>
+    </audio>
+
+    <audio id="gameOver">
+    <source src="http://dl.dropbox.com/u/26141789/canvas/snake/go.mp3" type="audio/mp3" />
+    <source src="http://dl.dropbox.com/u/26141789/canvas/snake/go.ogg" type="audio/ogg"/>
+    </audio>
+
+    <audio id="food">
+    <source src="http://dl.dropbox.com/u/26141789/canvas/snake/food.mp3" type="audio/mp3" />
+    <source src="http://dl.dropbox.com/u/26141789/canvas/snake/food.ogg" type="audio/ogg"/>
+    </audio>
+
+    <audio id="monsterkill">
+    <source src="sound/monster_kill.ogg" type="audio/ogg" />
+    </audio>
+
+     <audio id="dominating">
+    <source src="sound/Dominating.ogg" type="audio/ogg" />
+    </audio>
+
+    <audio id="triplekill">
+    <source src="sound/triple_kill.ogg" type="audio/ogg" />
+    </audio>
+    
+    <audio id="hollysh">
+    <source src="sound/HolyShit.ogg" type="audio/ogg" />
+    </audio>
+    
+
+
+    <script src="utils.js"></script>
+    <script src="g_keys.js"></script>
+    <script src="Paddle.js"></script>
+    <script src="g_ball.js"></script>
+    <script src="Bricks.js"></script>
+    <script src="g_main.js"></script>
+    <script src="update.js"></script>
+    <script src="render.js"></script>
+    <script src="PONG.js"></script>
+   <dl>
+    <dt>PLayer 1:</dt>
+    Move right/left : Key A/D
+    <dt>.......................................</dt>
+    <dt>Player 2:</dt>
+    Move right/left : Key J/L
+    <dt>.......................................</dt>
+      Press Key <strong>M</strong> to activate multiplayer mode<br />
+      Press Key <strong>E</strong> to get extra balls <br />
+      Press Key <strong>P</strong> to pause the game<br />
+      Press Key <strong>O</strong> per each step<br />
+      Press Key <strong>Q</strong> to quit the game
+      <dt>............................................................................</dt>
+      <i>For each 5 broken bricks u win one more life.</i>
+    </dl>
+    <p id="loading">Loading...</p>
+
+  </body>
+</html>
